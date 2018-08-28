@@ -48,7 +48,7 @@ polymorphism
 ### Documentations, debugging and logging
 + required logs are present
 + debug codes, if present, are clearly identified
-+ do not catch all exceptions
++ do not catch all exceptions in a generic single line
 + catch expressions are fine-grained to capture specific exception
 + exceptions, once caught are re-raised, unless it is intended by design
 + all variable and function names should capture their purpose if possible
@@ -87,7 +87,9 @@ information
 + for javascripts, refere [here](https://google.github.io/styleguide/jsguide.html)
 + for shell scripts, refer [here](https://google.github.io/styleguide/shell.xml)
 + for HTML/ CSS, refer [here](https://google.github.io/styleguide/htmlcssguide.html)
-
++ for R, refer [here](http://adv-r.had.co.nz/Style.html)
++ for python, try and use the future package to make the code version 
+independent as much as possible
 
 
 
