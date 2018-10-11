@@ -46,6 +46,9 @@ polymorphism
 + always stick to the [S.O.L.I.D.](https://en.wikipedia.org/wiki/SOLID) principles for class design
 
 ### Documentations, debugging and logging
++ follow standard documentation depending on the programming language
+and the doctools used (e.g. `docstring` (`python`), `roxygen` (`R`), `javadocs` 
+etc.
 + required logs are present
 + debug codes, if present, are clearly identified
 + do not catch all exceptions in a generic single line
@@ -62,24 +65,24 @@ a better version is implemented
 when no longer needed
 + all file descriptors, sockets, database cursors are released and destroyed
 when caught in exceptions
-+ use context managers 
 + all non-local scope variables are destroyed when no longer needed
 + if the programming language does not support automatic garbage collection, 
 make sure you are doing proper clean-up
-+ use **context managers** whenever accessing any OS resource
++ use **context managers** whenever accessing any OS resource, if supported by 
+the programming language
 + separate functionalities that do computation from those who co-ordiantes 
 (e.g. threading, queueing etc.)
 
 ### Security and performance
 + always do input validation **for all public APIs**
 + add **API rate limiting** for all public APIs
-+ check for sand-boxing and ensure for sensetive codes, some code is 
++ check for sand-boxing and ensure for sensetive codes, there is always some code which is 
 responsible for checking which users can run this and in which capacity
 + for functions/ scripts using more than a threshold time/ resource, take a
 profile and document future performance improvement scopes
 + always check for scalability. If this piece of code runs million instance in
 parallel, will it break?
-+ check stack trace generated in exceptions and if it contains sensitive 
++ check stack trace generated in exceptions and delivered as UI message; does it contain sensitive 
 information
 
 ### Coding styles
